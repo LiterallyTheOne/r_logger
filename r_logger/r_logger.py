@@ -3,7 +3,12 @@ import datetime
 import logging
 from pathlib import Path
 
-from typing import Literal, Any
+from typing import Any
+
+try:
+    from typing import Literal
+except ImportError:
+    pass
 
 
 class RLogger:
