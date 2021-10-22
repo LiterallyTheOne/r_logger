@@ -35,20 +35,20 @@ class RLogger:
         if directory_path:
             self.add_file_handler(directory_path)
 
-    def add_formatter(self, fmt=None, datefmt=None, style='%', validate=True, formatter=None):
-        # type: (str, str, Literal['%', '$', '{'], bool, logging.Formatter) -> logging.Formatter
+    def add_formatter(self, fmt=None, datefmt=None, style='%', formatter=None, **kwargs):
+        # type: (str, str, Literal['%', '$', '{'], logging.Formatter, dict['str', Any]) -> logging.Formatter
         """
         gets or creates a formatter an add it to formatters
 
         :param fmt: message format string
         :param datefmt: date format string
         :param style: formatting style: '%', '$', '{'
-        :param validate: if it's true, incorrect or mismatched style and fmt will raise a ValueError
         :param formatter: adds a created formatter
+        :keyword validate: if it's true, incorrect or mismatched style and fmt will raise a ValueError
         :return:
         """
         if formatter is None:
-            formatter = logging.Formatter(fmt, datefmt, style, validate)
+            formatter = logging.Formatter(fmt, datefmt, style, **kwargs)
         self._formatters.append(formatter)
         return formatter
 
