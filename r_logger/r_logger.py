@@ -25,8 +25,10 @@ class RLogger:
         self._logger = logger
 
         self.add_formatter("{asctime} - {levelname} - {message}", style='{')
-        self.add_file_handler(directory_path)
         self.add_stream_handler()
+
+        if directory_path:
+            self.add_file_handler(directory_path)
 
     def add_formatter(self, fmt=None, datefmt=None, style='%', validate=True, formatter=None):
         # type: (str, str, Literal['%', '$', '{'], bool, logging.Formatter) -> logging.Formatter
