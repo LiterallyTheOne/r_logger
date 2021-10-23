@@ -45,7 +45,7 @@ class RLogger:
         :param style: formatting style: '%', '$', '{'
         :param formatter: adds a created formatter
         :keyword validate: if it's true, incorrect or mismatched style and fmt will raise a ValueError
-        :return:
+        :return: created Formatter
         """
         if formatter is None:
             formatter = logging.Formatter(fmt, datefmt, style, **kwargs)
