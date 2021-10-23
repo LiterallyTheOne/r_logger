@@ -5,6 +5,7 @@ from pathlib import Path
 
 from typing import Any
 
+# TODO find a better way to make it suitable for python 3.7 as well
 try:
     from typing import Literal
 except ImportError:
@@ -47,6 +48,7 @@ class RLogger:
         :keyword validate: if it's true, incorrect or mismatched style and fmt will raise a ValueError
         :return: created Formatter
         """
+        # TODO find a better way to make it suitable for python 3.7 as well (valid is in kwargs)
         if formatter is None:
             formatter = logging.Formatter(fmt, datefmt, style, **kwargs)
         self._formatters.append(formatter)
