@@ -10,7 +10,7 @@ setup(
     author="Ramin Zarebidoky",
     author_email="ramin.zarebidoky@gmail.com",
     description="a customized way to use log",
-    url="https://github.com/RaminZarebidoky/r_config",
+    url="https://github.com/RaminZarebidoky/r_logger",
     long_description=long_description,
     long_description_content_type="text/markdown",
     install_requires=[],
