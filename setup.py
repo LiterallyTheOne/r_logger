@@ -5,7 +5,7 @@ with open('README.md', 'r') as f:
 
 setup(
     name='r_logger',
-    version="0.1.0",
+    version="0.1.1",
     packages=['r_logger'],
     author="Ramin Zarebidoky",
     author_email="ramin.zarebidoky@gmail.com",
